@@ -1,8 +1,10 @@
 const express = require('express')
+const cors = require('cors')
 const bodyParser = require('body-parser')
 const {connectToDb, getDb} = require('./dbConnection.cjs')
 const {ObjectId} = require('mongodb')
 const app = express()
+app.use(cors())
 app.use(bodyParser.json());
 
 let db
